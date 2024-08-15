@@ -1,6 +1,6 @@
 Deutsch:
 
-Wenn du ein Porno Problem hast, dann downlode diese Software, um jede Porno Website zu blocken die du willst!
+Wenn du ein Porno Problem hast, dann downloade diese Software, um jede Porno Website zu blocken die du willst!
 
 
 
