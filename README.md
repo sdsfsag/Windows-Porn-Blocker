@@ -1,7 +1,7 @@
 # Porn Blocker
 
 Welcome to my software, here I'll tell you what it does.
-## Funktionen
+## Functions
 - It has a built-in blocker that blocks porn sites as well as sex game sites.
 - He supports English German
 - Built-in info function that provides even more information about the blocker.
