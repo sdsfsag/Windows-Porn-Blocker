@@ -1,4 +1,4 @@
-# List of CPUs and GPUs That Might Struggle
+# List of CPUs and GPUs That Might Struggle with the PBlocker v3.5 or higher
 
 | Category | Examples of Overloaded CPUs/GPUs |
 |-----------|-------------------------------------|
