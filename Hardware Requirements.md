@@ -7,7 +7,7 @@
 | **Slow CPUs** | Intel Atom (Z8350, Z3735F) |
 | **CPUs Without Multithreading** | Intel Pentium G4560, old dual-core CPUs |
 | **CPUs Under 2.0 GHz** | Intel Core M3-6Y30, slow laptop CPUs |
-| **Integrated GPUs** | Intel HD Graphics (2000, 3000, 4000), AMD Radeon Vega 3, Vega 8 |
+| **Integrated GPUs** | Intel HD Graphics (2000, 3000, 4000), AMD Radeon Vega 3, Vega 6 |
 | **Low-End GPUs** | NVIDIA GT 710, GT 1030, AMD R5 230, R7 240 |
 ## How to Detect Overload
 - **High CPU/GPU Usage** (90-100% load)
