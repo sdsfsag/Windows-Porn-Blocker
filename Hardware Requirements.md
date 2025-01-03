@@ -4,7 +4,7 @@
 |-----------|-------------------------------------|
 | **Older or Weak CPUs** | Intel Core i3 (1st–4th Gen), Core 2 Duo, Pentium & Celeron (N4000, J4125) |
 | | AMD Athlon (200GE), A-Series (A4, A6, A8), Ryzen 3 (1st Gen) |
-| **Slow or Mobile CPUs** | Intel Atom (Z8350, Z3735F) |
+| **Slow CPUs** | Intel Atom (Z8350, Z3735F) |
 | **CPUs Without Multithreading** | Intel Pentium G4560, old dual-core CPUs |
 | **CPUs Under 2.0 GHz** | Intel Core M3-6Y30, slow laptop CPUs |
 | **Integrated GPUs** | Intel HD Graphics (2000, 3000, 4000), AMD Radeon Vega 3, Vega 8 |
