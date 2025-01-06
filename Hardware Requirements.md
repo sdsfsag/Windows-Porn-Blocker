@@ -1,4 +1,4 @@
-# Performance Requirements for Porn Blocker 3.5 and higher
+# Performance Requirements for Porn Blocker 4.0 and higher
 
 The new version of the Porn Blocker includes a **background timer** and a **real-time website monitoring feature**. This may cause performance issues on **older or weaker PCs**.
 
