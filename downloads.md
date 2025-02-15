@@ -1,3 +1,3 @@
-downloaded <b>2241</b> times
+downloaded <b>2648</b> times
 
-last two weeks <b>2098</b> 
+last two weeks <b>2505</b> 
