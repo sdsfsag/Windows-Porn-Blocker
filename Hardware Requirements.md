@@ -13,7 +13,7 @@ The new version of the Porn Blocker includes a **background timer** and a **real
 | **CPUs Below 2.0 GHz** | Intel Atom (Z8350), old Celeron models |
 
 ✅ **Minimum Recommended CPU:** At least a **Quad-Core** (4 cores).  
-💡 **Best Performance:** **Intel i5/i7 (6th Gen or later) or Ryzen 5 (2nd Gen or later).**
+💡 **Best Performance:** **Intel i3 (8th Gen or later) or Ryzen 5 (2nd Gen or later).**
 
 ---
 
