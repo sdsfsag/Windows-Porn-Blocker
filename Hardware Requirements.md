@@ -2,6 +2,8 @@
 
 The new version of the Porn Blocker includes a **background timer** and a **real-time website monitoring feature**. This may cause performance issues on **very old or weaker PCs**.
 
+*Please note that the instructions apply to version 3.5. If your PC doesn't support these requirements, just stay on the 3.4 version, which is still available. It can't do as much as the 3.5, but it also saves performance.*
+
 ## 🚨 PCs That Might Struggle
 
 | Category | Example CPUs |
@@ -12,8 +14,14 @@ The new version of the Porn Blocker includes a **background timer** and a **real
 | **Low-Power Desktop CPUs** | Intel Core M (M3-6Y30), AMD Ryzen 3 2200G |
 | **CPUs Below 2.0 GHz** | Intel Atom (Z8350), old Celeron models |
 
-✅ **Minimum Recommended CPU:** At least a **Quad-Core** (4 cores).  
-💡 **Best Performance:** **Intel i3 (8th Gen or later) or Ryzen 5 (2nd Gen or later).**
+✅ Minimum CPU (At Least Usable)
+Intel Core i3 (5th Gen - i3-5005U) → 2.0 GHz (Dual-Core, 4 Threads)
+AMD Ryzen 3 (1st Gen - Ryzen 3 1200) → 3.1 GHz (Boost up to 3.4 GHz) (Quad-Core, 4 Threads)
+
+💡 Recommended for Best Performance
+Intel Core i3 (8th Gen - i3-8100) → 3.6 GHz (Quad-Core, 4 Threads)
+AMD Ryzen 5 (2nd Gen - Ryzen 5 2600) → 3.4 GHz (Boost up to 3.9 GHz) (6 Cores, 12 Threads)
+ 
 
 ---
 
