@@ -3,7 +3,10 @@
 Welcome to my software, here I'll tell you what it does.
 ## Functions
 - It has a built-in blocker that blocks porn sites as well as sex game sites.
-- He supports English German
+- Feedback function to send feedback
+- Support if you need help
+- It supports English and German
+- Version check function where you cam check if your version is old or up to date!
 - Built-in info function that provides even more information about the blocker.
 
 - ## Porn Blocker PV
@@ -13,7 +16,7 @@ Welcome to my software, here I'll tell you what it does.
 - At the moment it's not worth downloading the parent version because there were only 4 versions in which only more pages were added. At the moment not all functions work as they should, but that will change at the beginning of summer 2025, as you can read [here](https://github.com/sdsfsag/Windows-Porn-Blocker/blob/main/Important%20information).
 
 ## How does it work?
-- It writes every site + a second version of the site + its IP address, then it writes firewall rules so that nothing from such sites gets to your computer and nothing from your computer gets to such sites,  which requires administrator rights, so don't be surprised if the UAC screen pops up. This may cause Windows Defender or your antivirus program to say that Porn Blocker is a virus
+- It writes every site + a second version of the site + its IP address, then it writes 2 firewall rules for each site, so that nothing from such sites gets to your computer and nothing from your computer gets to such sites, which requires administrator rights, so don't be surprised if the UAC screen pops up. This may cause Windows Defender or your antivirus program to say that Porn Blocker is a virus. This double site + IP + double firewall roule is for 5 times better security!
 
 ## Help
 - If you need help, you can use the built in Support function.
