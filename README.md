@@ -1,4 +1,4 @@
-# Porn Block 
+# Porn Block  
 
 Welcome to my software, here I'll tell you what it does.
 ## Functions
