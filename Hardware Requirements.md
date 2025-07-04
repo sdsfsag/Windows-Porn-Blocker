@@ -51,12 +51,12 @@ Installation size: ~800 MB
 
 ---
 
-ℹ️ Additional Notes
+## ℹ️ Additional Notes
 Supported OS: Windows 10 or newer
 
 Not compatible with Linux or macOS
 
-Antivirus software (e.g., AVG) may block features → Add exceptions if necessary
+Antivirus software (e.g., AVG) may block features or even the whole software/s → Add exceptions if necessary
 
 
 ---
