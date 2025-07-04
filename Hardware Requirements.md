@@ -39,6 +39,29 @@ AMD Ryzen 5 (2nd Gen - Ryzen 5 2600) → 3.4 GHz (Boost up to 3.9 GHz) (6 Cores,
 
 ---
 
+## 🧠 RAM Requirements
+✅ Atleast RAM: 8 GB (Windows takes 4 GB)
+
+💡 Recommended RAM: 8 GB or more for smooth performance
+
+---
+
+## 💾 Storage Requirements
+Installation size: ~800 MB
+
+---
+
+ℹ️ Additional Notes
+Supported OS: Windows 10 or newer
+
+Not compatible with Linux or macOS
+
+Antivirus software (e.g., AVG) may block features → Add exceptions if necessary
+
+
+---
+
+
 ## ⚠️ Signs of Performance Issues
 - **High CPU/GPU usage** (90-100% in Task Manager)
 - **Lag or slow performance**
