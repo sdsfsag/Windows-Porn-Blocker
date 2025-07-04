@@ -35,7 +35,6 @@ AMD Ryzen 5 (2nd Gen - Ryzen 5 2600) → 3.4 GHz (Boost up to 3.9 GHz) (6 Cores,
 | **Mobile GPUs Used in Desktops** | NVIDIA MX110, MX130 |
 
 ✅ **Minimum Recommended GPU:** Intel UHD 620 or AMD Vega 6.  
-💡 **Note:** If your PC only **blocks websites** without animations, a weak GPU is fine.
 
 ---
 
