@@ -4,6 +4,39 @@ Logs
 
 
 
+5.7.2025
+  3.5 EN/DE:
+    7 times bigger block list
+    92 times bigger than 3.4
+    Real time site monitoring
+    Religion feature - you can choose your religion than a verse pops up when you try to enter a porn site
+    Add religion - add your religion
+    Animations - when you try to enter a porn site a "Blocked by Porn Blocker" animation pops up
+    Real time timer - resets when unblock
+    Built in search - to find the sites you want to block
+    New overlay:
+      Block overlay - green sites = fast blocking time, yellow sites = medium long blocking time, red sites = long blocking time
+      Menu overlay - "Original" sign under the "Porn Blocker" logo
+      Timer - on the left bottom is a green timer which shows how long you are protected
+      Version - bottom right stands "3.5" which is the version
+      Category - top left now stands "[BETA]" so you now what you are using (teaser for next version)
+
+  3.5(3.5.2) Lite EN:
+    bug fixes
+    wrong translations fixed
+    new overlay
+  3.5(3.5.2) Lite DE:
+    new overlay
+    bug fixes
+
+  0.5 PV EN/DE::
+    New overlay (same as 3.5)
+    timer
+
+
+
+
+
 16.3.2025
 Display and translation errors when manually blocking have been fixed.
 
