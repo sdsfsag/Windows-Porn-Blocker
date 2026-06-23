@@ -15,34 +15,68 @@
     body {
       width: 100%;
       min-height: 100vh;
-      background:
-        radial-gradient(circle at center, rgba(80, 80, 100, 0.18), transparent 45%),
-        linear-gradient(180deg, #050509 0%, #0b0b12 45%, #020203 100%);
-      color: #e8e8e8;
-      font-family: Georgia, "Times New Roman", serif;
       overflow: hidden;
-      cursor: pointer;
+      color: #eeeeee;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #030306;
     }
 
-    .overlay {
+    .background {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.35);
+      background:
+        radial-gradient(circle at 20% 25%, rgba(85, 95, 130, 0.22), transparent 25%),
+        radial-gradient(circle at 80% 70%, rgba(70, 45, 75, 0.23), transparent 30%),
+        radial-gradient(circle at 50% 90%, rgba(120, 120, 150, 0.12), transparent 35%),
+        linear-gradient(180deg, #080812 0%, #11111f 45%, #030306 100%);
       z-index: 1;
+    }
+
+    .rain {
+      position: fixed;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      background-image:
+        linear-gradient(to bottom, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0) 75%);
+      background-size: 2px 120px;
+      animation: rainMove 1.1s linear infinite;
+      opacity: 0.18;
+    }
+
+    .fog {
+      position: fixed;
+      inset: -20%;
+      z-index: 3;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 30% 50%, rgba(255,255,255,0.08), transparent 35%),
+        radial-gradient(circle at 70% 45%, rgba(255,255,255,0.06), transparent 40%);
+      filter: blur(40px);
+      animation: fogMove 18s ease-in-out infinite alternate;
+      opacity: 0.55;
+    }
+
+    .vignette {
+      position: fixed;
+      inset: 0;
+      z-index: 4;
+      pointer-events: none;
+      background: radial-gradient(circle, transparent 35%, rgba(0,0,0,0.72) 100%);
     }
 
     .noise {
       position: fixed;
       inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
-      opacity: 0.22;
+      z-index: 5;
       pointer-events: none;
-      z-index: 2;
+      opacity: 0.16;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.35'/%3E%3C/svg%3E");
     }
 
     .container {
       position: relative;
-      z-index: 3;
+      z-index: 10;
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -52,46 +86,44 @@
     }
 
     .content {
-      animation: fadeIn 2.5s ease forwards;
+      max-width: 1000px;
+      animation: fadeIn 2.8s ease forwards;
       opacity: 0;
     }
 
     h1 {
-      font-size: clamp(2.8rem, 8vw, 7rem);
+      font-size: clamp(3rem, 8vw, 7.5rem);
       font-weight: 400;
-      letter-spacing: 0.04em;
-      color: #f1f1f1;
-      text-shadow: 0 0 25px rgba(255, 255, 255, 0.12);
-      margin-bottom: 25px;
+      letter-spacing: 0.045em;
+      color: #f2f2f2;
+      text-shadow:
+        0 0 25px rgba(255,255,255,0.13),
+        0 0 70px rgba(120,120,160,0.18);
+      margin-bottom: 30px;
+    }
+
+    .line {
+      width: 180px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #777, transparent);
+      margin: 0 auto 30px;
+      opacity: 0.7;
     }
 
     .date {
-      font-size: clamp(1rem, 2vw, 1.4rem);
-      letter-spacing: 0.18em;
+      font-family: Arial, sans-serif;
+      font-size: clamp(1rem, 2vw, 1.45rem);
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: #9b9b9b;
-      font-family: Arial, sans-serif;
-      margin-bottom: 35px;
+      color: #a6a6a6;
+      margin-bottom: 20px;
     }
 
-    .subtitle {
-      font-size: clamp(0.95rem, 1.6vw, 1.2rem);
-      color: #777;
+    .small-text {
       font-family: Arial, sans-serif;
-      letter-spacing: 0.08em;
-    }
-
-    .hint {
-      position: fixed;
-      bottom: 28px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 4;
-      color: #555;
-      font-family: Arial, sans-serif;
-      font-size: 0.85rem;
-      letter-spacing: 0.08em;
-      animation: pulse 2.5s infinite;
+      font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+      letter-spacing: 0.1em;
+      color: #6f6f6f;
     }
 
     audio {
@@ -101,22 +133,32 @@
     @keyframes fadeIn {
       from {
         opacity: 0;
-        transform: translateY(18px);
+        transform: translateY(24px) scale(0.98);
       }
 
       to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
       }
     }
 
-    @keyframes pulse {
-      0%, 100% {
-        opacity: 0.35;
+    @keyframes rainMove {
+      from {
+        background-position: 0 -120px;
       }
 
-      50% {
-        opacity: 0.8;
+      to {
+        background-position: 0 120px;
+      }
+    }
+
+    @keyframes fogMove {
+      from {
+        transform: translateX(-4%) translateY(2%);
+      }
+
+      to {
+        transform: translateX(4%) translateY(-2%);
       }
     }
   </style>
@@ -125,31 +167,38 @@
 <body>
   <audio id="bgMusic" src="ridgeclub - do i clench my fists.mp3" loop hidden></audio>
 
-  <div class="overlay"></div>
+  <div class="background"></div>
+  <div class="rain"></div>
+  <div class="fog"></div>
+  <div class="vignette"></div>
   <div class="noise"></div>
 
   <main class="container">
     <div class="content">
       <h1>Everything comes to an end</h1>
 
-      <!-- HIER SPÄTER DEIN DATUM EINTRAGEN -->
+      <div class="line"></div>
+
+      <!-- HIER DEIN DATUM EINTRAGEN -->
       <div class="date">DATE WILL BE ADDED</div>
 
-      <div class="subtitle">Click anywhere to listen</div>
+      <div class="small-text">Some endings are quiet.</div>
     </div>
   </main>
 
-  <div class="hint">click anywhere</div>
-
   <script>
-    document.addEventListener("click", () => {
-      const audio = document.getElementById("bgMusic");
-      audio.volume = 0.5;
-      audio.play();
+    window.addEventListener("load", () => {
+      const accepted = confirm("Play background music?");
 
-      document.querySelector(".hint").style.display = "none";
-      document.querySelector(".subtitle").textContent = "";
-    }, { once: true });
+      if (accepted) {
+        const audio = document.getElementById("bgMusic");
+        audio.volume = 0.5;
+
+        audio.play().catch(() => {
+          alert("Der Browser hat die Musik blockiert. Klicke danach einmal irgendwo auf die Seite.");
+        });
+      }
+    });
   </script>
 </body>
 </html>
