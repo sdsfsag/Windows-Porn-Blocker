@@ -1,1 +1,1 @@
-(The end of everything)[https://sdsfsag.github.io/Windows-Porn-Blocker/]
+[The end of everything](https://sdsfsag.github.io/Windows-Porn-Blocker/)
