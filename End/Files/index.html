@@ -1,9 +1,155 @@
-<audio id="bgMusic" src="ridgeclub - do i clench my fists.mp3" loop hidden></audio>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Everything comes to an end</title>
 
-<script>
-document.addEventListener("click", () => {
-  const audio = document.getElementById("bgMusic");
-  audio.volume = 0.5;
-  audio.play();
-}, { once: true });
-</script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at center, rgba(80, 80, 100, 0.18), transparent 45%),
+        linear-gradient(180deg, #050509 0%, #0b0b12 45%, #020203 100%);
+      color: #e8e8e8;
+      font-family: Georgia, "Times New Roman", serif;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: 1;
+    }
+
+    .noise {
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+      opacity: 0.22;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .container {
+      position: relative;
+      z-index: 3;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .content {
+      animation: fadeIn 2.5s ease forwards;
+      opacity: 0;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 8vw, 7rem);
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: #f1f1f1;
+      text-shadow: 0 0 25px rgba(255, 255, 255, 0.12);
+      margin-bottom: 25px;
+    }
+
+    .date {
+      font-size: clamp(1rem, 2vw, 1.4rem);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #9b9b9b;
+      font-family: Arial, sans-serif;
+      margin-bottom: 35px;
+    }
+
+    .subtitle {
+      font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+      color: #777;
+      font-family: Arial, sans-serif;
+      letter-spacing: 0.08em;
+    }
+
+    .hint {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 4;
+      color: #555;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      animation: pulse 2.5s infinite;
+    }
+
+    audio {
+      display: none;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 0.35;
+      }
+
+      50% {
+        opacity: 0.8;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <audio id="bgMusic" src="ridgeclub - do i clench my fists.mp3" loop hidden></audio>
+
+  <div class="overlay"></div>
+  <div class="noise"></div>
+
+  <main class="container">
+    <div class="content">
+      <h1>Everything comes to an end</h1>
+
+      <!-- HIER SPÄTER DEIN DATUM EINTRAGEN -->
+      <div class="date">DATE WILL BE ADDED</div>
+
+      <div class="subtitle">Click anywhere to listen</div>
+    </div>
+  </main>
+
+  <div class="hint">click anywhere</div>
+
+  <script>
+    document.addEventListener("click", () => {
+      const audio = document.getElementById("bgMusic");
+      audio.volume = 0.5;
+      audio.play();
+
+      document.querySelector(".hint").style.display = "none";
+      document.querySelector(".subtitle").textContent = "";
+    }, { once: true });
+  </script>
+</body>
+</html>
