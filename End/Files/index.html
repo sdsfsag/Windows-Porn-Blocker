@@ -25,9 +25,9 @@
       position: fixed;
       inset: 0;
       background:
-        radial-gradient(circle at 20% 25%, rgba(85, 95, 130, 0.22), transparent 25%),
-        radial-gradient(circle at 80% 70%, rgba(70, 45, 75, 0.23), transparent 30%),
-        radial-gradient(circle at 50% 90%, rgba(120, 120, 150, 0.12), transparent 35%),
+        radial-gradient(circle at 20% 25%, rgba(85, 95, 130, 0.24), transparent 25%),
+        radial-gradient(circle at 80% 70%, rgba(70, 45, 75, 0.25), transparent 30%),
+        radial-gradient(circle at 50% 90%, rgba(120, 120, 150, 0.13), transparent 35%),
         linear-gradient(180deg, #080812 0%, #11111f 45%, #030306 100%);
       z-index: 1;
     }
@@ -38,7 +38,7 @@
       z-index: 2;
       pointer-events: none;
       background-image:
-        linear-gradient(to bottom, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0) 75%);
+        linear-gradient(to bottom, rgba(255,255,255,0.13) 0%, rgba(255,255,255,0) 75%);
       background-size: 2px 120px;
       animation: rainMove 1.1s linear infinite;
       opacity: 0.18;
@@ -62,16 +62,7 @@
       inset: 0;
       z-index: 4;
       pointer-events: none;
-      background: radial-gradient(circle, transparent 35%, rgba(0,0,0,0.72) 100%);
-    }
-
-    .noise {
-      position: fixed;
-      inset: 0;
-      z-index: 5;
-      pointer-events: none;
-      opacity: 0.16;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.35'/%3E%3C/svg%3E");
+      background: radial-gradient(circle, transparent 35%, rgba(0,0,0,0.75) 100%);
     }
 
     .container {
@@ -126,6 +117,50 @@
       color: #6f6f6f;
     }
 
+    .start-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background:
+        radial-gradient(circle at center, rgba(90, 90, 120, 0.18), transparent 35%),
+        rgba(0, 0, 0, 0.82);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      backdrop-filter: blur(8px);
+      cursor: pointer;
+      transition: opacity 1.2s ease, visibility 1.2s ease;
+    }
+
+    .start-screen.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .start-box {
+      padding: 40px;
+      max-width: 600px;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .start-title {
+      font-size: clamp(2rem, 5vw, 4.5rem);
+      font-weight: 400;
+      color: #f0f0f0;
+      margin-bottom: 25px;
+      letter-spacing: 0.04em;
+    }
+
+    .start-text {
+      font-family: Arial, sans-serif;
+      color: #9a9a9a;
+      font-size: 1rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
     audio {
       display: none;
     }
@@ -165,13 +200,19 @@
 </head>
 
 <body>
-  <audio id="bgMusic" src="ridgeclub - do i clench my fists.mp3" loop hidden></audio>
+  <audio id="bgMusic" src="ridgeclub - do i clench my fists.mp3" loop preload="auto"></audio>
 
   <div class="background"></div>
   <div class="rain"></div>
   <div class="fog"></div>
   <div class="vignette"></div>
-  <div class="noise"></div>
+
+  <div class="start-screen" id="startScreen">
+    <div class="start-box">
+      <div class="start-title">Enter</div>
+      <div class="start-text">click to continue</div>
+    </div>
+  </div>
 
   <main class="container">
     <div class="content">
@@ -187,16 +228,16 @@
   </main>
 
   <script>
-    window.addEventListener("load", () => {
-      const accepted = confirm("Play background music?");
+    const startScreen = document.getElementById("startScreen");
+    const audio = document.getElementById("bgMusic");
 
-      if (accepted) {
-        const audio = document.getElementById("bgMusic");
+    startScreen.addEventListener("click", async () => {
+      try {
         audio.volume = 0.5;
-
-        audio.play().catch(() => {
-          alert("Der Browser hat die Musik blockiert. Klicke danach einmal irgendwo auf die Seite.");
-        });
+        await audio.play();
+        startScreen.classList.add("hidden");
+      } catch (error) {
+        console.log("Audio konnte nicht gestartet werden:", error);
       }
     });
   </script>
