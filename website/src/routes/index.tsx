@@ -42,16 +42,16 @@ type Edition = {
 };
 
 const editions: Edition[] = [
-  { title: "Porn Blocker DE 3.6", tag: "Flagship Â· Deutsch", hue: 220, description: "Beschreibung folgt.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/Porn.Blocker.installer.3.6.DE.exe", code: "PB Â· DE 3.6" },
-  { title: "Porn Blocker EN 1.6", tag: "Flagship Â· English", hue: 200, description: "Description coming soon.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/Porn.Blocker.installer.1.6.EN.exe", code: "PB Â· EN 1.6" },
-  { title: "Porn Blocker DE 3.6 Lite", tag: "Lite Â· Deutsch", hue: 180, description: "Beschreibung folgt.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/Porn.Blocker.Lite.DE.Beta.3.6.exe", code: "LITE Â· DE" },
-  { title: "Porn Blocker EN 1.6 Lite", tag: "Lite Â· English", hue: 160, description: "Description coming soon.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/Porn.Blocker.EN.Lite.Beta.1.6.exe", code: "LITE Â· EN" },
-  { title: "Porn Blocker PV Beta 0.6", tag: "Preview Â· Deutsch", hue: 280, description: "Beschreibung folgt.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/Porn.Blocker.PV.DE.Beta.0.6.-.unstable.exe", code: "PV Î² Â· DE" },
-  { title: "Porn Blocker EN PV Beta 0.6", tag: "Preview Â· English", hue: 300, description: "Description coming soon.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/Porn.Blocker.EN.PV.Beta.0.6.-.unstable.exe", code: "PV Î² Â· EN" },
-  { title: "Porn Blocker 3.6 Debian DE", tag: "Debian Â· Deutsch", hue: 20, description: "Beschreibung folgt.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/PBlocker-Debian-DE_3.6.1_amd64.deb", code: "DEB Â· DE" },
-  { title: "Porn Blocker 1.6 Debian EN", tag: "Debian Â· English", hue: 40, description: "Description coming soon.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/PBlocker-Debian-EN_1.6_amd64.deb", code: "DEB Â· EN" },
-  { title: "Porn Blocker Turbo EN", tag: "Turbo Â· English", hue: 340, description: "Description coming soon.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/Porn.Blocker.Turbo.installer.1.0.EN.exe", code: "TURBO Â· EN" },
-  { title: "Porn Blocker Turbo DE", tag: "Turbo Â· Deutsch", hue: 0, description: "Beschreibung folgt.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/Porn.Blocker.Turbo.installer.1.0.DE.exe", code: "TURBO Â· DE" },
+  { title: "Porn Blocker DE 3.6", tag: "Flagship Deutsch", hue: 220, description: "Beschreibung folgt.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/Porn.Blocker.installer.3.6.DE.exe", code: "PB Â· DE 3.6" },
+  { title: "Porn Blocker EN 1.6", tag: "Flagship English", hue: 200, description: "Description coming soon.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/Porn.Blocker.installer.1.6.EN.exe", code: "PB Â· EN 1.6" },
+  { title: "Porn Blocker DE 3.6 Lite", tag: "Lite Deutsch", hue: 180, description: "Beschreibung folgt.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/Porn.Blocker.Lite.DE.Beta.3.6.exe", code: "LITE Â· DE" },
+  { title: "Porn Blocker EN 1.6 Lite", tag: "Lite English", hue: 160, description: "Description coming soon.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/Porn.Blocker.EN.Lite.Beta.1.6.exe", code: "LITE Â· EN" },
+  { title: "Porn Blocker PV Beta 0.6", tag: "Preview Deutsch", hue: 280, description: "Beschreibung folgt.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/Porn.Blocker.PV.DE.Beta.0.6.-.unstable.exe", code: "PV Î² Â· DE" },
+  { title: "Porn Blocker EN PV Beta 0.6", tag: "Preview English", hue: 300, description: "Description coming soon.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/Porn.Blocker.EN.PV.Beta.0.6.-.unstable.exe", code: "PV Î² Â· EN" },
+  { title: "Porn Blocker 3.6 Debian DE", tag: "Debian Deutsch", hue: 20, description: "Beschreibung folgt.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/PBlocker-Debian-DE_3.6.1_amd64.deb", code: "DEB Â· DE" },
+  { title: "Porn Blocker 1.6 Debian EN", tag: "Debian English", hue: 40, description: "Description coming soon.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/PBlocker-Debian-EN_1.6_amd64.deb", code: "DEB Â· EN" },
+  { title: "Porn Blocker Turbo EN", tag: "Turbo English", hue: 340, description: "Description coming soon.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/Porn.Blocker.Turbo.installer.1.0.EN.exe", code: "TURBO Â· EN" },
+  { title: "Porn Blocker Turbo DE", tag: "Turbo Deutsch", hue: 0, description: "Beschreibung folgt.", downloadURL: "https://github.com/sdsfsag/Windows-Porn-Blocker/releases/download/v3.6/Porn.Blocker.Turbo.installer.1.0.DE.exe", code: "TURBO Â· DE" },
 ];
 
 /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ STARFIELD / WARP CANVAS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
