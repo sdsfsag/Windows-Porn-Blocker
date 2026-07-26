@@ -374,7 +374,7 @@ export function Index() {
               {[
                 { k: "10", v: "Editions" },
                 { k: "2", v: "Languages" },
-                { k: "âˆž", v: "Final" },
+                { k: "\u221E", v: "Final" },
               ].map((s) => (
                 <div key={s.v} className="rounded-2xl border border-white/10 bg-white/[0.02] px-6 py-6 backdrop-blur">
                   <div className="text-4xl font-thin tracking-tight">{s.k}</div>
