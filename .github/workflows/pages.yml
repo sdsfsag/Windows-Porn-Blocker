@@ -33,9 +33,6 @@ jobs:
 
       - name: Build static website
         run: bun run build
-        env:
-          NITRO_PRESET: github-pages
-          NITRO_APP_BASE_URL: /Windows-Porn-Blocker/
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -43,7 +40,7 @@ jobs:
       - name: Upload website
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./website/.output/public
+          path: ./website/dist
 
   deploy:
     needs: build
@@ -55,3 +52,4 @@ jobs:
       - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v4
+
