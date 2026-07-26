@@ -14,13 +14,13 @@ import { Download, ArrowDown } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Porn Blocker 3.6 — The Final Version" },
+      { title: "Porn Blocker 3.6 â€” The Final Version" },
       {
         name: "description",
         content:
           "The final, legendary release of Porn Blocker 3.6. A cinematic, once-in-a-project experience.",
       },
-      { property: "og:title", content: "Porn Blocker 3.6 — The Final Version" },
+      { property: "og:title", content: "Porn Blocker 3.6 â€” The Final Version" },
       {
         property: "og:description",
         content: "The final, legendary release. Choose your edition.",
@@ -42,19 +42,19 @@ type Edition = {
 };
 
 const editions: Edition[] = [
-  { title: "Porn Blocker DE 3.6", tag: "Flagship · Deutsch", hue: 220, description: "Beschreibung folgt.", file: "porn-blocker-de-3.6", code: "PB · DE 3.6" },
-  { title: "Porn Blocker EN 1.6", tag: "Flagship · English", hue: 200, description: "Description coming soon.", file: "porn-blocker-en-1.6", code: "PB · EN 1.6" },
-  { title: "Porn Blocker DE 3.6 Lite", tag: "Lite · Deutsch", hue: 180, description: "Beschreibung folgt.", file: "porn-blocker-de-3.6-lite", code: "LITE · DE" },
-  { title: "Porn Blocker EN 1.6 Lite", tag: "Lite · English", hue: 160, description: "Description coming soon.", file: "porn-blocker-en-1.6-lite", code: "LITE · EN" },
-  { title: "Porn Blocker PV Beta 0.6", tag: "Preview · Deutsch", hue: 280, description: "Beschreibung folgt.", file: "porn-blocker-pv-beta-0.6", code: "PV β · DE" },
-  { title: "Porn Blocker EN PV Beta 0.6", tag: "Preview · English", hue: 300, description: "Description coming soon.", file: "porn-blocker-en-pv-beta-0.6", code: "PV β · EN" },
-  { title: "Porn Blocker 3.6 Debian DE", tag: "Debian · Deutsch", hue: 20, description: "Beschreibung folgt.", file: "porn-blocker-3.6-debian-de", code: "DEB · DE" },
-  { title: "Porn Blocker 1.6 Debian EN", tag: "Debian · English", hue: 40, description: "Description coming soon.", file: "porn-blocker-1.6-debian-en", code: "DEB · EN" },
-  { title: "Porn Blocker Turbo EN", tag: "Turbo · English", hue: 340, description: "Description coming soon.", file: "porn-blocker-turbo-en", code: "TURBO · EN" },
-  { title: "Porn Blocker Turbo DE", tag: "Turbo · Deutsch", hue: 0, description: "Beschreibung folgt.", file: "porn-blocker-turbo-de", code: "TURBO · DE" },
+  { title: "Porn Blocker DE 3.6", tag: "Flagship Â· Deutsch", hue: 220, description: "Beschreibung folgt.", file: "porn-blocker-de-3.6", code: "PB Â· DE 3.6" },
+  { title: "Porn Blocker EN 1.6", tag: "Flagship Â· English", hue: 200, description: "Description coming soon.", file: "porn-blocker-en-1.6", code: "PB Â· EN 1.6" },
+  { title: "Porn Blocker DE 3.6 Lite", tag: "Lite Â· Deutsch", hue: 180, description: "Beschreibung folgt.", file: "porn-blocker-de-3.6-lite", code: "LITE Â· DE" },
+  { title: "Porn Blocker EN 1.6 Lite", tag: "Lite Â· English", hue: 160, description: "Description coming soon.", file: "porn-blocker-en-1.6-lite", code: "LITE Â· EN" },
+  { title: "Porn Blocker PV Beta 0.6", tag: "Preview Â· Deutsch", hue: 280, description: "Beschreibung folgt.", file: "porn-blocker-pv-beta-0.6", code: "PV Î² Â· DE" },
+  { title: "Porn Blocker EN PV Beta 0.6", tag: "Preview Â· English", hue: 300, description: "Description coming soon.", file: "porn-blocker-en-pv-beta-0.6", code: "PV Î² Â· EN" },
+  { title: "Porn Blocker 3.6 Debian DE", tag: "Debian Â· Deutsch", hue: 20, description: "Beschreibung folgt.", file: "porn-blocker-3.6-debian-de", code: "DEB Â· DE" },
+  { title: "Porn Blocker 1.6 Debian EN", tag: "Debian Â· English", hue: 40, description: "Description coming soon.", file: "porn-blocker-1.6-debian-en", code: "DEB Â· EN" },
+  { title: "Porn Blocker Turbo EN", tag: "Turbo Â· English", hue: 340, description: "Description coming soon.", file: "porn-blocker-turbo-en", code: "TURBO Â· EN" },
+  { title: "Porn Blocker Turbo DE", tag: "Turbo Â· Deutsch", hue: 0, description: "Beschreibung folgt.", file: "porn-blocker-turbo-de", code: "TURBO Â· DE" },
 ];
 
-/* ────────────── STARFIELD / WARP CANVAS ────────────── */
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ STARFIELD / WARP CANVAS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 function Starfield({ boost }: { boost: React.MutableRefObject<number> }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -126,7 +126,7 @@ function Starfield({ boost }: { boost: React.MutableRefObject<number> }) {
   return <canvas ref={canvasRef} className="fixed inset-0 -z-10 opacity-70" />;
 }
 
-/* ────────────── SCRAMBLE TEXT ────────────── */
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ SCRAMBLE TEXT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 function useScramble(target: string, active: boolean, duration = 1400) {
   const [out, setOut] = useState(active ? target : "");
   useEffect(() => {
@@ -152,8 +152,8 @@ function useScramble(target: string, active: boolean, duration = 1400) {
   return out;
 }
 
-/* ────────────── MAIN ────────────── */
-function Index() {
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ MAIN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+export function Index() {
   const containerRef = useRef<HTMLDivElement>(null);
   const warpBoost = useRef(0);
 
@@ -197,7 +197,7 @@ function Index() {
   const spotlight = useMotionTemplate`radial-gradient(600px circle at ${mx}px ${my}px, hsla(280,100%,70%,0.10), transparent 40%)`;
 
   const heroTitle = useScramble("PORN BLOCKER", true, 1600);
-  const finalTag = useScramble("FINAL RELEASE · MMXXVI", true, 2200);
+  const finalTag = useScramble("FINAL RELEASE Â· MMXXVI", true, 2200);
 
   return (
     <div ref={containerRef} className="relative bg-black text-white" style={{ perspective: "1400px" }}>
@@ -233,7 +233,7 @@ function Index() {
       {/* Top HUD */}
       <div className="fixed left-6 top-6 z-40 flex items-center gap-3 text-[10px] tracking-[0.4em] text-white/50">
         <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
-        LIVE · v3.6.FINAL
+        LIVE Â· v3.6.FINAL
       </div>
 
       {/* HERO */}
@@ -336,7 +336,7 @@ function Index() {
               {["FINAL VERSION", "3.6", "TEN EDITIONS", "MMXXVI", "PORN BLOCKER", "FINAL RELEASE"].map((w, i) => (
                 <span key={i} className="flex items-center gap-16">
                   {w}
-                  <span className="text-white/[0.04]">✦</span>
+                  <span className="text-white/[0.04]">âœ¦</span>
                 </span>
               ))}
             </span>
@@ -374,7 +374,7 @@ function Index() {
               {[
                 { k: "10", v: "Editions" },
                 { k: "2", v: "Languages" },
-                { k: "∞", v: "Final" },
+                { k: "âˆž", v: "Final" },
               ].map((s) => (
                 <div key={s.v} className="rounded-2xl border border-white/10 bg-white/[0.02] px-6 py-6 backdrop-blur">
                   <div className="text-4xl font-thin tracking-tight">{s.k}</div>
@@ -405,9 +405,9 @@ function Index() {
         </div>
 
         <div className="mx-auto mt-40 max-w-3xl text-center">
-          <div className="font-mono text-[10px] tracking-[0.6em] text-white/30">◆  FIN  ◆</div>
+          <div className="font-mono text-[10px] tracking-[0.6em] text-white/30">â—†  FIN  â—†</div>
           <p className="mt-6 text-sm font-light text-white/40">
-            Porn Blocker 3.6 — the final version. Thank you for every version before.
+            Porn Blocker 3.6 â€” the final version. Thank you for every version before.
           </p>
         </div>
       </motion.section>
@@ -415,7 +415,7 @@ function Index() {
   );
 }
 
-/* ────────────── CUBE CARD (mouse tilt + shine sweep) ────────────── */
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ CUBE CARD (mouse tilt + shine sweep) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 function CubeCard({ edition, index }: { edition: Edition; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const rx = useMotionValue(0);
@@ -490,7 +490,7 @@ function CubeCard({ edition, index }: { edition: Edition; index: number }) {
 
         {/* corner index */}
         <div className="absolute right-5 top-5 font-mono text-[10px] tracking-[0.3em] text-white/40">
-          № {String(index + 1).padStart(2, "0")}
+          â„– {String(index + 1).padStart(2, "0")}
         </div>
 
         <div className="relative">
@@ -522,3 +522,4 @@ function CubeCard({ edition, index }: { edition: Edition; index: number }) {
     </motion.div>
   );
 }
+
