@@ -3,6 +3,29 @@ Logs
 
 
 
+26.7.2026
+I set myself the goal of making the final version as efficient as possible. I managed to reduce the installer size alone from over 1 GB to just 180 MB—without removing any features or making any other compromises.
+
+  DE 3.6/3.6 Lite/DE PV 0.6/EN 1.6/1.6 Lite/EN PV 0.6:
+    Addet + 10.000 websites
+    Intro added where background processes are loaded and started
+    New blocking system:
+        60 times faster blocking than before
+        There were performance issues with the "pblocker_timer_service.exe" which (tested on a Ryzen 5 3500U) caused up to 50% CPU usage, which were fixed in Porn Blocker 3.6.
+
+  Porn Blocker Turbo DE/Porn Blocker Turbo EN:
+    First GUI in the Porn Blocker series.
+    Settings menu with settings such as "Clear DNS after blocking, CPU threads used, etc.")
+    Blocks 4 times faster than the normal 3.6/1.6 version
+
+  Porn Blocker Debian DE/EN:
+    Exactly the same as the normal 3.6/1.6, translated only on Debian
+    No timer service -> no protection time
+    
+
+
+
+
 
 5.7.2025
   3.5 EN/DE:
